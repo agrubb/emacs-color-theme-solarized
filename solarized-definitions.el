@@ -163,22 +163,22 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
               (fg-blue `(:foreground ,blue))
               (fg-cyan `(:foreground ,cyan))
 
-              (fmt-none `(:weight normal :slant normal  :underline nil        :inverse-video nil))
-              (fmt-bold `(:weight ,bold  :slant normal  :underline nil        :inverse-video nil))
-              (fmt-bldi `(:weight ,bold                 :underline nil        :inverse-video nil))
-              (fmt-undr `(:weight normal :slant normal  :underline ,underline :inverse-video nil))
-              (fmt-undb `(:weight ,bold  :slant normal  :underline ,underline :inverse-video nil))
-              (fmt-undi `(:weight normal                :underline ,underline :inverse-video nil))
-              (fmt-uopt `(:weight normal :slant normal  :underline ,opt-under :inverse-video nil))
+              (fmt-none `())
+              (fmt-bold `(:weight ,bold))
+              (fmt-bldi `(:weight ,bold))
+              (fmt-undr `(:underline ,underline))
+              (fmt-undb `(:weight ,bold  :underline ,underline))
+              (fmt-undi `(:underline ,underline))
+              (fmt-uopt `(:underline ,opt-under))
               ;; FIXME: not quite the same
-              (fmt-curl `(:weight normal :slant normal  :underline t          :inverse-video nil))
-              (fmt-ital `(:weight normal :slant ,italic :underline nil        :inverse-video nil))
+              (fmt-curl `(:underline t))
+              (fmt-ital `(:slant ,italic))
               ;; FIXME: not quite the same
-              (fmt-stnd `(:weight normal :slant normal  :underline nil        :inverse-video t))
-              (fmt-revr `(:weight normal :slant normal  :underline nil        :inverse-video t))
-              (fmt-revb `(:weight ,bold  :slant normal  :underline nil        :inverse-video t))
-              (fmt-revbb `(:weight ,bright-bold :slant normal :underline nil  :inverse-video t))
-              (fmt-revbbu `(:weight ,bright-bold :slant normal  :underline ,underline :inverse-video t)))
+              (fmt-stnd `(:inverse-video t))
+              (fmt-revr `(:inverse-video t))
+              (fmt-revb `(:weight ,bold :inverse-video t))
+              (fmt-revbb `(:weight ,bright-bold :inverse-video t))
+              (fmt-revbbu `(:weight ,bright-bold :underline ,underline :inverse-video t)))
           `((;; basic
              (default ((t (,@fg-base0 ,@bg-back)))) ; Normal
              (cursor ((t (,@fg-base03 ,@bg-base0)))) ; Cursor
