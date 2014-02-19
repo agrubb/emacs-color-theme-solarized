@@ -522,15 +522,17 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
              ;;flyspell
              (flyspell-incorrect ((t (,@fg-red))))
              (flyspell-duplicate ((t (,@fg-yellow))))
-	     ;;ansi-term
-	     (term-color-black ((t ( ,@fg-base02))))
-	     (term-color-red ((t ( ,@fg-red))))
-	     (term-color-green ((t ( ,@fg-green))))
-	     (term-color-yellow ((t ( ,@fg-yellow))))
-	     (term-color-blue ((t ( ,@fg-blue))))
-	     (term-color-magenta ((t ( ,@fg-magenta))))
-	     (term-color-cyan ((t ( ,@fg-cyan))))
-	     (term-color-white ((t ( ,@fg-base00)))))
+             ;;ansi-term
+             (term-color-black ((t ( ,@fg-base02))))
+             (term-color-red ((t ( ,@fg-red))))
+             (term-color-green ((t ( ,@fg-green))))
+             (term-color-yellow ((t ( ,@fg-yellow))))
+             (term-color-blue ((t ( ,@fg-blue))))
+             (term-color-magenta ((t ( ,@fg-magenta))))
+             (term-color-cyan ((t ( ,@fg-cyan))))
+             (term-color-white ((t ( ,@fg-base00))))
+             ;; grep
+             (match ((t (,@fmt-stnd ,@fg-yellow ,@bg-back)))))
 
             ((foreground-color . ,(when (<= 16 (display-color-cells)) base0))
              (background-color . ,back)
